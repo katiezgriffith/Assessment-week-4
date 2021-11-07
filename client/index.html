@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Back End Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+    
+
   </head>
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
     <button id="fortuneButton">Get a Fortune</button>
+    <header>
+      <h1>My Dream Job Database </h1>
+  </header>
+  <h3>Here you will log in your dream job details.</h3>
+  <p>Your Dream job can change. Don't let the fear of striking out, keep you out of the game. Here you will keep a log of
+  dream jobs. They can be anything. IF you dream it and push yourself forward, you can do great things! So don't be shy.</p>
+  <h4>Think about what you would like to make salary-wise</h4>
+  <main>
+
+  <form>
+      <input 
+          type='text'
+          id="job"
+          placeholder=" What is your dream job?"/>
+      <input 
+          type='text'
+          id="salary"
+          placeholder='What is your dream salary?'/>
+      <input 
+          type='text'
+          id="imageURL"
+          placeholder='Place an image URL of your dream job?'/>
+      
+      <button id="jobButton">add job</button>
+  </form>
+
+  <section id="jobs-container"></section>
+
+  </main>
+
+  <script src="http://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="main.js"></script>
+  
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
@@ -25,5 +64,13 @@
             alert(data);
           });
     };</script>
+
+
+    
+     } </script>
+
+    <script src="main.js"></script>
+
+
   </body>
 </html>
