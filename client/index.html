@@ -12,13 +12,14 @@
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
     <button id="fortuneButton">Get a Fortune</button>
+    <button id="tipsButton">Career tips for you</button>
     <header>
       <h1>My Dream Job Database </h1>
   </header>
   <h3>Here you will log in your dream job details.</h3>
   <p>Your Dream job can change. Don't let the fear of striking out, keep you out of the game. Here you will keep a log of
   dream jobs. They can be anything. IF you dream it and push yourself forward, you can do great things! So don't be shy.</p>
-  <h4>Think about what you would like to make salary-wise</h4>
+  <h4>Think about what you would like to make salary-wise. Here you can keep track and update!</h4>
   <main>
 
   <form>
@@ -33,7 +34,7 @@
       <input 
           type='text'
           id="imageURL"
-          placeholder='Place an image URL of your dream job?'/>
+          placeholder='Place an image URL of your dream job.'/>
       
       <button id="jobButton">add job</button>
   </form>
@@ -63,11 +64,18 @@
             const data = response.data;
             alert(data);
           });
-    };</script>
+    };
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>document.getElementById("tipsButton").onclick = function () {
+      axios.get("http://localhost:4000/api/tip/")
+        .then(function (response) {
+        const data = response.data;
+        alert(data);
+    });
+};
+</script>
 
-
-    
-     } </script>
 
     <script src="main.js"></script>
 

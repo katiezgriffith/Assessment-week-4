@@ -46,6 +46,20 @@ app.get("/api/fortune", (req, res) => {
   
 });
 
+app.get("/api/tip", (req, res) => {
+  const tips =["You don’t have to pay your dues",
+  "Don’t be realistic, alter your reality instead",
+  "Pick a mentor over higher pay",
+
+  ];
+
+ 
+  let randomIndex = Math.floor(Math.random() * tips.length);
+  let randomTip = tips[randomIndex];
+
+  res.status(200).send(randomTip);
+  
+});
 
 const {
   getJobs, 

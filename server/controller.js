@@ -35,14 +35,14 @@ module.exports ={
         // }else{
         //     res.sendStatus(400)
 
-        if (jobs[index].price <= 1000 && type === 'minus') {
-            jobs[index].price = 0
+        if (jobs[index].salary <= 10000 && type === 'minus') {
+            jobs[index].salary = 100000
             res.status(200).send(jobs)
         } else if (type === 'plus') {
-            jobs[index].price += 1000
+            jobs[index].salary += 1000
             res.status(200).send(jobs)
         } else if (type === 'minus') {
-            jobs[index].price -= 1000
+            jobs[index].salary -= 1000
             res.status(200).send(jobs)
         } else {
             res.sendStatus(400)
